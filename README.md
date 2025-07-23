@@ -52,15 +52,15 @@ venv\Scripts\activate             # On Windows
 ```
 ## Typical requirements.txt includes:
 
-#### streamlit
-#### pandas
-#### sqlite3 (standard with Python, for DB)
-#### requests (if needed for Ollama API)
+- **streamlit**
+- **pandas**
+- **sqlite3 (standard with Python, for DB)**
+- **requests (if needed for Ollama API)**
 
 ### 4. Set Up Your Database
-#### Place your SQLite DB file (e.g., ecom.db) inside the data/ folder.
+- **Place your SQLite DB file (e.g., ecom.db) inside the data/ folder.**
 
-#### Make sure your tables match the schema used in the agent (see next section).
+- **Make sure your tables match the schema used in the agent (see next section).**
 
 ### 5. Install and Run Ollama (Local LLM)
  Download and install Ollama: https://ollama.com/download
@@ -78,13 +78,13 @@ ollama run orca-mini
 ### Database Schema Example
 ### The default database expects tables like:
 
-### -> ad_sales(date, item_id, ad_sales, impressions, ad_spend, clicks, units_sold)
+-> ad_sales(date, item_id, ad_sales, impressions, ad_spend, clicks, units_sold)
 https://docs.google.com/spreadsheets/d/1ZATJteA4sU7DXN-fqJxG8Td_Nwif5QB2fTQvGK8LegY/edit?usp=sharing
 
-### -> total_sales(date, item_id, total_sales, total_units_ordered)
+-> total_sales(date, item_id, total_sales, total_units_ordered)
 https://docs.google.com/spreadsheets/d/1ftXt9Z6uEXUMlIHSZK0CR2kLlNZyj8TUi4lQmMF6qWo/edit?usp=sharing
 
-### -> eligibility(eligibility_datetime_utc, item_id, eligibility, message)
+-> eligibility(eligibility_datetime_utc, item_id, eligibility, message)
 https://docs.google.com/spreadsheets/d/1Loc32KsHwEGhLAahSfMA6t1aZdEvxJIPADxpdzZEZTw/edit?gid=95626969#gid=95626969
 
 ## Modify or initialize your DB accordingly.
