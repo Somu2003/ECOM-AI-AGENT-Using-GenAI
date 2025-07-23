@@ -29,7 +29,7 @@ This project is a Streamlit-based web application that lets you ask natural-lang
 - **LLM Model**: `orca-mini` (recommended for low-memory devices)
 
 ## Project Folder Structure
-<img width="282" height="396" alt="image" src="https://github.com/user-attachments/assets/e4949a3e-66c5-4d80-b36f-f00d7b8a2086" />
+<img width="390" height="526" alt="image" src="https://github.com/user-attachments/assets/91f0f193-cfe6-472c-84d7-4fd8998848a3" />
 
 
 ## Installation & Setup
