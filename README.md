@@ -17,7 +17,7 @@ This project is a Streamlit-based web application that lets you ask natural-lang
 
 | User Question | AI Response |
 |---------------|-------------|
-| What is my total sales? | SQL: `SELECT SUM(total_sales) FROM total_sales;`<br>Answer: Data and chart displayed |
+| What is my total sales? | SQL: `SELECT SUM(total_sales) FROM total_sales;` |
 
 ## Requirements
 
