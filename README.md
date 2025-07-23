@@ -41,14 +41,15 @@ git clone https://github.com/yourusername/ecom-ai-agent.git
 cd ecom-ai-agent
 ```
 ### 2. Create a Virtual Environment
-
-## python -m venv venv
-## source venv/bin/activate          # On Linux/Mac
-## venv\Scripts\activate             # On Windows
-
+```bash
+python -m venv venv
+source venv/bin/activate          # On Linux/Mac
+venv\Scripts\activate             # On Windows
+```
 ### 3. Install Python Dependencies
-## pip install -r requirements.txt
-
+```bash
+ pip install -r requirements.txt
+```
 ## Typical requirements.txt includes:
 
 # streamlit
@@ -62,12 +63,16 @@ cd ecom-ai-agent
 # Make sure your tables match the schema used in the agent (see next section).
 
 ### 5. Install and Run Ollama (Local LLM)
-# Download and install Ollama: https://ollama.com/download
+ Download and install Ollama: https://ollama.com/download
 
 ### Pull the recommended model:
+```bash
 ollama pull orca-mini
+```
 ### Start the Ollama model in a new terminal:
+```bash
 ollama run orca-mini
+```
 (Leave this terminal open during app usage.)
 
 ## Database Schema Example
@@ -88,14 +93,14 @@ https://docs.google.com/spreadsheets/d/1Loc32KsHwEGhLAahSfMA6t1aZdEvxJIPADxpdzZE
 
 ### 1.Start Ollama and the orca-mini model (in one terminal):
 
-bash
+```bash
 ollama run orca-mini
-
+```
 ### 2.Run the Streamlit app (in a new terminal):
 
-bash
+```bash
 streamlit run frontend/streamlit_app.py
-
+```
 ## Open your browser:
 Visit http://localhost:8501
 ## Ask questions in the input box and see answers, SQL logic.
