@@ -1,5 +1,5 @@
 
-# E-commerce AI Data Q&A Agent
+## E-commerce AI Data Q&A Agent
 
 This project is a Streamlit-based web application that lets you ask natural-language questions ("What is my total sales?", "Which product had the highest CPC?", etc.) about your e-commerce business. The AI agent converts your question into an SQL query, fetches data from your database, then displays results, SQL logic, and visualizations—fully interactively.
 
@@ -52,42 +52,42 @@ venv\Scripts\activate             # On Windows
 ```
 ## Typical requirements.txt includes:
 
-# streamlit
-# pandas
-# sqlite3 (standard with Python, for DB)
-# requests (if needed for Ollama API)
+#### streamlit
+#### pandas
+#### sqlite3 (standard with Python, for DB)
+#### requests (if needed for Ollama API)
 
 ### 4. Set Up Your Database
-# Place your SQLite DB file (e.g., ecom.db) inside the data/ folder.
+#### Place your SQLite DB file (e.g., ecom.db) inside the data/ folder.
 
-# Make sure your tables match the schema used in the agent (see next section).
+#### Make sure your tables match the schema used in the agent (see next section).
 
 ### 5. Install and Run Ollama (Local LLM)
  Download and install Ollama: https://ollama.com/download
 
-### Pull the recommended model:
+#### Pull the recommended model:
 ```bash
 ollama pull orca-mini
 ```
-### Start the Ollama model in a new terminal:
+#### Start the Ollama model in a new terminal:
 ```bash
 ollama run orca-mini
 ```
 (Leave this terminal open during app usage.)
 
-## Database Schema Example
-# The default database expects tables like:
+### Database Schema Example
+### The default database expects tables like:
 
-# -> ad_sales(date, item_id, ad_sales, impressions, ad_spend, clicks, units_sold)
+### -> ad_sales(date, item_id, ad_sales, impressions, ad_spend, clicks, units_sold)
 https://docs.google.com/spreadsheets/d/1ZATJteA4sU7DXN-fqJxG8Td_Nwif5QB2fTQvGK8LegY/edit?usp=sharing
 
-# -> total_sales(date, item_id, total_sales, total_units_ordered)
+### -> total_sales(date, item_id, total_sales, total_units_ordered)
 https://docs.google.com/spreadsheets/d/1ftXt9Z6uEXUMlIHSZK0CR2kLlNZyj8TUi4lQmMF6qWo/edit?usp=sharing
 
-# -> eligibility(eligibility_datetime_utc, item_id, eligibility, message)
+### -> eligibility(eligibility_datetime_utc, item_id, eligibility, message)
 https://docs.google.com/spreadsheets/d/1Loc32KsHwEGhLAahSfMA6t1aZdEvxJIPADxpdzZEZTw/edit?gid=95626969#gid=95626969
 
-# Modify or initialize your DB accordingly.
+## Modify or initialize your DB accordingly.
 
 ### How to Run the App
 
@@ -101,7 +101,7 @@ ollama run orca-mini
 ```bash
 streamlit run frontend/streamlit_app.py
 ```
-## Open your browser:
+### Open your browser:
 Visit http://localhost:8501
-## Ask questions in the input box and see answers, SQL logic.
+### Ask questions in the input box and see answers, SQL logic.
 
