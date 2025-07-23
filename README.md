@@ -1,17 +1,114 @@
-# ECOM-AI-AGENT-Using-GenAI
+# E-commerce AI Data Q&A Agent
+
+This project is```
+# E-commerce AI Data Q&A Agent
+
 This project is a Streamlit-based web application that lets you ask natural-language questions ("What is my total sales?", "Which product had the highest CPC?", etc.) about your e-commerce business. The AI agent converts your question into an SQL query, fetches data from your database, then displays results, SQL logic, and visualizations—fully interactively.
 
-Features
-Ask business questions in plain English
+## Features
 
-LLM-powered SQL generation: Converts your questions into SQL automatically
+- **Ask business questions in plain English**
+- **LLM-powered SQL generation:** Converts your questions into SQL automatically
+- **Results from your actual database**  
+- **Transparent:** Shows the SQL query used and the AI's raw thinking
+- **Interactive tables and auto-generated visualizations** (bar, line, and metric charts)
+- **Typewriter/streaming effect** for answers
 
-Results from your actual database
+## Demo Screenshot
+<img width="635" height="506" alt="image" src="https://github.com/user-attachments/assets/27570d7f-5e9a-440d-8a1f-3b2caaab3fd1" />
 
-Transparent: Shows the SQL query used and the AI's raw thinking
+| User Question | AI Response |
+|---------------|-------------|
+| What is my total sales? | SQL: `SELECT SUM(total_sales) FROM total_sales;`<br>Answer: Data and chart displayed |
 
-Interactive tables and auto-generated visualizations (bar, line, and metric charts)
+## Requirements
 
-Typewriter/streaming effect for answers
+- **Python 3.8+**
+- **Streamlit**
+- **Pandas**
+- **SQLite** (your data in a `.db` file, e.g., `ecom.db`)
+- **Ollama** (for running a local LLM, such as `orca-mini`)
+- **LLM Model**: `orca-mini` (recommended for low-memory devices)
 
-Demo Screenshot
+## Project Folder Structure
+
+ecom-ai-agent/
+├── frontend/
+│ └── streamlit_app.py
+├── backend/
+│ ├── agent.py
+│ ├── db_utils.py
+│ └── llm_utils.py
+├── data/
+│ └── ecom.db
+├── requirements.txt
+├── README.md
+└── ... other scripts/files
+
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/ecom-ai-agent.git
+cd ecom-ai-agent
+```
+### 2. Create a Virtual Environment
+
+python -m venv venv
+source venv/bin/activate          # On Linux/Mac
+venv\Scripts\activate             # On Windows
+
+###3. Install Python Dependencies
+
+pip install -r requirements.txt
+
+Typical requirements.txt includes:
+
+streamlit
+pandas
+sqlite3 (standard with Python, for DB)
+requests (if needed for Ollama API)
+
+###4. Set Up Your Database
+Place your SQLite DB file (e.g., ecom.db) inside the data/ folder.
+
+Make sure your tables match the schema used in the agent (see next section).
+
+###5. Install and Run Ollama (Local LLM)
+Download and install Ollama: https://ollama.com/download
+
+Pull the recommended model:
+ollama pull orca-mini
+###Start the Ollama model in a new terminal:
+ollama run orca-mini
+(Leave this terminal open during app usage.)
+
+Database Schema Example
+The default database expects tables like:
+
+-> ad_sales(date, item_id, ad_sales, impressions, ad_spend, clicks, units_sold)
+
+-> total_sales(date, item_id, total_sales, total_units_ordered)
+
+-> eligibility(eligibility_datetime_utc, item_id, eligibility, message)
+
+Modify or initialize your DB accordingly.
+
+###How to Run the App
+
+###1.Start Ollama and the orca-mini model (in one terminal):
+
+bash
+ollama run orca-mini
+
+###2.Run the Streamlit app (in a new terminal):
+
+bash
+streamlit run frontend/streamlit_app.py
+
+Open your browser:
+Visit http://localhost:8501
+Ask questions in the input box and see answers, SQL logic.
+
