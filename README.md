@@ -42,9 +42,9 @@ cd ecom-ai-agent
 ```
 ### 2. Create a Virtual Environment
 
-python -m venv venv
-source venv/bin/activate          # On Linux/Mac
-venv\Scripts\activate             # On Windows
+###ython -m venv venv
+##source venv/bin/activate          # On Linux/Mac
+##venv\Scripts\activate             # On Windows
 
 ###3. Install Python Dependencies
 
