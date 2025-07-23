@@ -1,6 +1,4 @@
-# E-commerce AI Data Q&A Agent
 
-This project is```
 # E-commerce AI Data Q&A Agent
 
 This project is a Streamlit-based web application that lets you ask natural-language questions ("What is my total sales?", "Which product had the highest CPC?", etc.) about your e-commerce business. The AI agent converts your question into an SQL query, fetches data from your database, then displays results, SQL logic, and visualizations—fully interactively.
@@ -31,19 +29,7 @@ This project is a Streamlit-based web application that lets you ask natural-lang
 - **LLM Model**: `orca-mini` (recommended for low-memory devices)
 
 ## Project Folder Structure
-
-ecom-ai-agent/
-├── frontend/
-│ └── streamlit_app.py
-├── backend/
-│ ├── agent.py
-│ ├── db_utils.py
-│ └── llm_utils.py
-├── data/
-│ └── ecom.db
-├── requirements.txt
-├── README.md
-└── ... other scripts/files
+<img width="282" height="396" alt="image" src="https://github.com/user-attachments/assets/e4949a3e-66c5-4d80-b36f-f00d7b8a2086" />
 
 
 ## Installation & Setup
